@@ -1,76 +1,87 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import { github, linkedin, menu, close } from '../assets';
 
 export default function Navbar() {
-  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav 
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
-    >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link 
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain"></img>
-          <p className="text-white text-[18px] font-bold cursor-pointer">Theodore Choi</p>
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map( (Link) => (
-            <li 
-              key={Link.id}
-              className={`${
-                active === Link.title
-                  ? "text-white"
-                  : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(Link.title)}
-            >
-              <a href={`#${Link.id}`}>{Link.title}</a>
-            </li>
-          ))}
-        </ul>
+    <>
+      <nav 
+        className="sm:px-8 px-3 sm:flex h-full hidden items-center py-10 fixed left-0 z-20 bg-white-100 text-gray-700"
+      >
+        <div className='h-full w-20 flex flex-col justify-start items-center'>
+          <Link 
+            to="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <p className="text-black text-[44px] font-bold cursor-pointer">T</p>
+          </Link>
+          
+          <div className="gap-2 flex -rotate-90 my-40">
+            <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Contact</a>
+            <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">About</a>
+            <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Projects</a>
+          </div>
+          
+          <div className="gap-8 flex flex-col justify-end h-full">
+            <a href='https://github.com/the0choi' target="_blank" rel="noreferrer">
+              <img src={github} alt='github' className='w-6 h-6 object-contain opacity-80' />
+            </a>
+            <a href='https://www.linkedin.com/in/theodore-choi-70ba61194/' target="_blank" rel="noreferrer">
+              <img src={linkedin} alt='linkedin' className='w-6 h-6 object-contain opacity-80' />
+            </a>
+          </div>
+        </div>
+      </nav>
+      
+      <nav 
+        className="sm:hidden w-full flex items-center justify-between pt-3 fixed left-0 z-20 bg-white-100 bg-opacity-50 text-gray-700"
+      >
+        <div className='h-full w-20 px-6 z-20'>
+          <Link 
+            to="/"
+            onClick={() => {
+              window.scrollTo(0, 0);
+              toggle ? setToggle(false) : '';
+            }}
+          >
+            <p className="text-black text-[44px] font-bold cursor-pointer">T</p>
+          </Link>
+        </div>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="flex flex-col justify-start items-center px-6">
           <img 
             src={toggle ? close : menu} 
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[20px] h-[20px] object-contain cursor-pointer z-20"
             onClick={() => setToggle(!toggle)}
           />
 
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
-              {navLinks.map( (Link) => (
-                <li 
-                  key={Link.id}
-                  className={`${
-                    active === Link.title
-                      ? "text-white"
-                      : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setActive(Link.title);
-                    setToggle(!toggle);
-                  }}
-                >
-                  <a href={`#${Link.id}`}>{Link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+          <div className={`${!toggle ? 'hidden' : 'flex'} flex-col items-center justify-center p-6 bg-white-100 bg-opacity-80 backdrop-blur absolute w-screen h-screen top-0 left-0 z-10`}>
 
-      </div>
-    </nav>
+            <div className="flex flex-col justify-center items-center gap-10">
+              <a href="#contact" className="hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4" onClick={() => setToggle(!toggle)}>Contact</a>
+              <a href="#about" className="hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4" onClick={() => setToggle(!toggle)}>About</a>
+              <a href="#projects" className="hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4" onClick={() => setToggle(!toggle)}>Projects</a>
+            </div>
+
+            <div className="gap-8 flex absolute bottom-20">
+            <a href='https://github.com/the0choi' target="_blank" rel="noreferrer">
+              <img src={github} alt='github' className='w-8 h-8 object-contain opacity-80' />
+            </a>
+            <a href='https://www.linkedin.com/in/theodore-choi-70ba61194/' target="_blank" rel="noreferrer">
+              <img src={linkedin} alt='linkedin' className='w-8 h-8 object-contain opacity-80' />
+            </a>
+          </div>
+
+          </div>
+
+        </div>
+      </nav>
+
+    </>
   )
 }
