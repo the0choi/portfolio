@@ -21,9 +21,9 @@ export default function Navbar() {
           </Link>
           
           <div className="gap-2 flex -rotate-90 my-40">
-            <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Contact</a>
+            <a href="#contact" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Contact</a>
             <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">About</a>
-            <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Projects</a>
+            <a href="#projects" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Projects</a>
           </div>
           
           <div className="gap-8 flex flex-col justify-end h-full">
