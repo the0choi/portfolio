@@ -6,12 +6,13 @@ import { LaptopCanvas } from './canvas'
 export default function Projects() {
   return (
     <>
+      <div className="sm:px-16 px-6 border border-secondary w-3/5 mt-8 mx-auto"></div>
       <Project 
         projectNo={"01"} 
         title={"AI Art Generator & Interpretor"}
         description={"A community platform to share AI art powered from textual prompts."}
         url={"https://github.com/the0choi/envision"}
-        color={"blue-500"}
+        color={"blue"}
         model={
           <LaptopCanvas 
             title={"envision"} 
@@ -28,7 +29,7 @@ export default function Projects() {
         title={"Gamified Productivity App"}
         description={"Retro-style productivity timer with gamified elements."}
         url={"https://github.com/the0choi/dino-park"}
-        color={"red-500"}
+        color={"red"}
         model={
           <LaptopCanvas 
             title={"dino park"} 
@@ -45,7 +46,7 @@ export default function Projects() {
         title={"Fitness & Lifestyle Tracker"}
         description={"Data-centric integration with Fitbit to track users' health metrics."}
         url={"https://github.com/the0choi/trackr"}
-        color={"yellow-500"}
+        color={"yellow"}
         model={
           <LaptopCanvas 
             title={"trackr"} 
@@ -63,7 +64,7 @@ export default function Projects() {
         title={"Web Browser Game"}
         description={"An aquatic twist on the classic Minesweeper game."}
         url={"https://github.com/the0choi/sea-sweep"}
-        color={"green-500"}
+        color={"green"}
         model={
           <LaptopCanvas 
             title={"sea sweep"} 

@@ -1,28 +1,29 @@
 import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
-
+import { CrystalCanvas } from './canvas';
 
 export default function Hero() {
 
   return (
-    <section className="relative w-full h-screen">
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] left-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
+    <section className="relative w-full h-screen bg-[#11151c]">
+      <div className={`sm:px-16 px-6 absolute inset-0 top-[120px] left-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-black-100`}>Hi, I'm <span className="text-[#915eff]">Theodore</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-black`}>
-            I am a full-stack software engineer. 
-          </p>
-        </div>
+        <p className={"sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider mt-2 text-gray-400 pl-6"}>
+          Junior full-stack software engineer ⇀
+        </p>
 
       </div>
-      
-      <ComputersCanvas />
+
+      <div className="headline-container">
+        <div id="text-behind">THEODORE<br /><span className="bottomText">CHOI</span></div>
+        <div id="text-behind-blur">THEODORE<br /><span className="bottomText">CHOI</span></div>
+        <div id="text-front">THEODORE<br /><span className="bottomText">CHOI</span></div>
+        <div className="canvas-container">
+            < CrystalCanvas />
+        </div>     
+      </div>
+
+
+       
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#projects">

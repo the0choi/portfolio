@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <>
       <nav 
-        className="sm:px-8 px-3 sm:flex h-full hidden items-center py-10 fixed left-0 z-20 bg-white-100 text-gray-700"
+        className="sm:px-8 px-3 sm:flex h-full hidden items-center py-10 fixed left-0 z-20 bg-transparent text-gray-500 inverted-text"
       >
         <div className='h-full w-20 flex flex-col justify-start items-center'>
           <Link 
@@ -17,13 +17,13 @@ export default function Navbar() {
               window.scrollTo(0, 0);
             }}
           >
-            <p className="text-black text-[44px] font-bold cursor-pointer">T</p>
+            <p className="text-black text-[44px] font-bold cursor-pointer bg-red-400 rounded-full px-4 pt-1 w-14 h-14 flex items-center justify-center">T</p>
           </Link>
           
           <div className="gap-2 flex -rotate-90 my-40">
-            <a href="#contact" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Contact</a>
-            <a href="#about" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">About</a>
-            <a href="#projects" className="hidden sm:flex hover:text-gray-500 text-[18px] font-medium cursor-pointer px-4">Projects</a>
+            <a href="#contact" className="hidden sm:flex text-[18px] font-medium cursor-pointer px-4">Contact</a>
+            <a href="#about" className="hidden sm:flex text-[18px] font-medium cursor-pointer px-4">About</a>
+            <a href="#projects" className="hidden sm:flex text-[18px] font-medium cursor-pointer px-4">Projects</a>
           </div>
           
           <div className="gap-8 flex flex-col justify-end h-full">

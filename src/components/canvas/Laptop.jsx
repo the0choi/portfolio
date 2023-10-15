@@ -1,5 +1,5 @@
-import { Suspense, useEffect, useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Suspense, useEffect, useState, useRef } from 'react';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 import PropTypes from 'prop-types';
@@ -25,14 +25,21 @@ function Laptop({ isMobile, sceneModel, rotation }) {
   const scale = scaleFactor * (canvasWidth / 1920);
 
   const laptop = useGLTF(sceneModel);
+  const meshRef = useRef();
+
+  useFrame(({ clock }) => {
+    if (meshRef.current) {
+      meshRef.current.position.y = Math.sin(clock.getElapsedTime()) * 0.1;
+    }
+  });
 
   return (
-    <mesh>
+    <mesh ref={meshRef}>
       <hemisphereLight intensity={6} groundColor='black' />
       <pointLight intensity={1} />
       <primitive
         object={laptop.scene}
-        scale={scale}
+        scale={0.1}
         position={[0, -0.3, 0]}
         rotation={rotation}
       />
@@ -60,7 +67,8 @@ export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation
   return (
     <>
       <Canvas 
-      frameloop="demand"
+      style={{ width: '50vw', height: '50vw' }}
+      frameloop="always"
       shadows
       camera={{position: [10, 0, 10], fov: 20}}
       gl={{ preserveDrawingBuffer: true }}
