@@ -14,7 +14,7 @@ export default function Hero() {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-black`}>Hi, I'm <span className="text-[#915eff]">Theodore</span></h1>
+          <h1 className={`${styles.heroHeadText} text-black-100`}>Hi, I'm <span className="text-[#915eff]">Theodore</span></h1>
           <p className={`${styles.heroSubText} mt-2 text-black`}>
             I am a full-stack software engineer. 
           </p>
