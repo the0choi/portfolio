@@ -14,6 +14,26 @@
   color-scheme: dark;
 }
 
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 ::selection {
   color: white;
   background: rgb(4, 155, 155);
@@ -256,14 +276,15 @@
 }
 
 #text-front {
-  /*  Set text-color to transparent to only show the outline  */
   color: transparent;
-  text-stroke: 2px white;
   -webkit-text-stroke: 2px white;
   z-index: 3;
 }
 
-.inverted-text {
-  filter: invert(100%);
-  transition: color 0.3s ease;
+.color-filter-1 {
+  filter: invert(50%);
+}
+
+.color-filter-2 {
+  filter: invert(50%);
 }

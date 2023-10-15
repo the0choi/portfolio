@@ -1,12 +1,9 @@
 import { Suspense, useEffect, useState, useRef } from 'react';
 import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import { MeshStandardMaterial } from 'three';
 import CanvasLoader from '../Loader';
-import PropTypes from 'prop-types';
 
-function Crystal() {
-  const { size } = useThree();
+function Crystal({ isMobile }) {
   const Crystal = useGLTF('/crystal_rock/scene.gltf?url');
   const mesh = useRef();
 
@@ -14,16 +11,25 @@ function Crystal() {
 
   return (
     <mesh ref={mesh}>
-      <hemisphereLight intensity={2} groundColor='white' />
-      <pointLight color={0x9f85cc} intensity={10} distance={20} position={[0, 3, 2]} />
-      <pointLight color={0x9f85cc} intensity={10} distance={20} position={[0, 3, 2]} />
+      <hemisphereLight intensity={30} groundColor='white' />
+      <pointLight color={0x85ccb8} intensity={20} distance={20} position={[0, 3, 2]} />
+      <pointLight color={0x9f85cc} intensity={20} distance={20} position={[0, 3, 2]} />
       <primitive
         object={Crystal.scene}
         scale={1.2}
-        position={[0, 0.25, 0]}
+        position={isMobile ? [0, 0.3, 0] : [0, 0.15, 0]}
         rotation={[0, 0, 0]}
       />
-      <meshStandardMaterial attach="material" color={0xffffff} roughness={0} metalness={1} envMapIntensity={10} shininess={50}  reflectivity={1}/>
+      <meshStandardMaterial 
+        attach="material" 
+        color={0xffffff} 
+        roughness={0} 
+        metalness={1} 
+        envMapIntensity={10} 
+        shininess={50} 
+        reflectivity={1}
+        emissive={[0.5, 0.5, 0.5]}
+      />
     </mesh>
   )
 };
@@ -58,15 +64,15 @@ export default function CrystalCanvas() {
           <OrbitControls 
           enableZoom={false}
           enableRotate={false}
+          enablePan={false} 
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           />
-          <Crystal />
+          <Crystal isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
       </Canvas>
-
     </>
   )
 }

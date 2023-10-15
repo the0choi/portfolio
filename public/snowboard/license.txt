@@ -1,0 +1,8 @@
+Model Information:
+* title:	Kid Snowboard and boots
+* source:	https://sketchfab.com/3d-models/kid-snowboard-and-boots-e81d698eec4246719549c1281c7893b9
+* author:	infinition (https://sketchfab.com/infinition)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative w-full h-screen bg-[#11151c]">
       <div className={`sm:px-16 px-6 absolute inset-0 top-[120px] left-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
 
-        <p className={"sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider mt-2 text-gray-400 pl-6"}>
+        <p className={"sm:text-[18px] text-[14px] text-gray-400 uppercase tracking-widest mt-2 text-gray-400 pl-6"}>
           Junior full-stack software engineer ⇀
         </p>
 
@@ -21,9 +21,6 @@ export default function Hero() {
             < CrystalCanvas />
         </div>     
       </div>
-
-
-       
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#projects">

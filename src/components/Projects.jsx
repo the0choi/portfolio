@@ -6,7 +6,7 @@ import { LaptopCanvas } from './canvas'
 export default function Projects() {
   return (
     <>
-      <div className="sm:px-16 px-6 border border-secondary w-3/5 mt-8 mx-auto"></div>
+      <div className="h-80 w-full bg-gradient-to-b from-[#11151c] via-[#807e7e] to-transparent"></div>
       <Project 
         projectNo={"01"} 
         title={"AI Art Generator & Interpretor"}

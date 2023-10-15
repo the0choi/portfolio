@@ -19,10 +19,6 @@ Laptop.propTypes = {
 
 
 function Laptop({ isMobile, sceneModel, rotation }) {
-  const { size } = useThree();
-  const scaleFactor = 0.24;
-  const canvasWidth = size.width;
-  const scale = scaleFactor * (canvasWidth / 1920);
 
   const laptop = useGLTF(sceneModel);
   const meshRef = useRef();
@@ -76,6 +72,7 @@ export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation
       <Suspense fallback={<CanvasLoader />}>
           <OrbitControls 
           enableZoom={false}
+          enablePan={false} 
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           />
