@@ -15,12 +15,10 @@ function Snowboard({ isMobile }) {
 
   return (
     <mesh ref={meshRef}>
-      <hemisphereLight intensity={30} groundColor='white' />
-      <pointLight color={0x85ccb8} intensity={20} distance={20} position={[0, 3, 2]} />
       <primitive
         object={Snowboard.scene}
         scale={0.13}
-        position={isMobile ? [0, 0.3, 0] : [0, 0.15, 0]}
+        position={[0, 0.15, 0]}
         rotation={[1, 1, -0.5]}
       />
     </mesh>

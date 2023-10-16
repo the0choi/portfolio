@@ -10,8 +10,10 @@ export default function Projects() {
       <Project 
         projectNo={"01"} 
         title={"AI Art Generator & Interpretor"}
+        tech={"React • Express • Node JS • MongoDB"}
         description={"A community platform to share AI art powered from textual prompts."}
         url={"https://github.com/the0choi/envision"}
+        website={"https://envision-the0choi-8e677992651d.herokuapp.com/"}
         color={"blue"}
         model={
           <LaptopCanvas 
@@ -27,8 +29,10 @@ export default function Projects() {
       <Project 
         projectNo={"02"} 
         title={"Gamified Productivity App"}
+        tech={"Django • PostgreSQL • Photoshop"} 
         description={"Retro-style productivity timer with gamified elements."}
         url={"https://github.com/the0choi/dino-park"}
+        website={"https://dino-park-fd91c4eeec11.herokuapp.com/"}
         color={"red"}
         model={
           <LaptopCanvas 
@@ -44,8 +48,10 @@ export default function Projects() {
       <Project 
         projectNo={"03"} 
         title={"Fitness & Lifestyle Tracker"}
+        tech={"Express • Node JS • MongoDB"}
         description={"Data-centric integration with Fitbit to track users' health metrics."}
         url={"https://github.com/the0choi/trackr"}
+        website={"https://trackr-the0choi-1fa6c3dcf348.herokuapp.com/"}
         color={"yellow"}
         model={
           <LaptopCanvas 
@@ -62,8 +68,10 @@ export default function Projects() {
       <Project 
         projectNo={"04"} 
         title={"Web Browser Game"}
+        tech={"HTML • CSS • JavaScript"}
         description={"An aquatic twist on the classic Minesweeper game."}
         url={"https://github.com/the0choi/sea-sweep"}
+        website={"https://the0choi.github.io/sea-sweep/"}
         color={"green"}
         model={
           <LaptopCanvas 

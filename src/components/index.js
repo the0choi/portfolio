@@ -2,19 +2,21 @@ import { EarthCanvas, StarsCanvas, LaptopCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
-import Tech from './Tech';
+import Skills from './Skills';
 import Projects from './Projects';
 import Project from './Project';
 import Contact from './Contact';
+import Footer from './Footer';
 
 export {
   Hero,
   Navbar,
   About,
-  Tech,
+  Skills,
   Project,
   Projects,
   Contact,
+  Footer,
   EarthCanvas, 
   StarsCanvas,
   LaptopCanvas

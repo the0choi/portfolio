@@ -1,49 +1,26 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
-    docker,
     threejs,
+    docker,
+    python,
+    django,
+    postgre
   } from "../assets";
-  
-  const services = [
-    {
-      title: "Web Developer",
-      icon: web,
-    },
-    {
-      title: "React Native Developer",
-      icon: mobile,
-    },
-    {
-      title: "Backend Developer",
-      icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
-    },
-  ];
   
   const technologies = [
     {
-      name: "HTML 5",
+      name: "HTML",
       icon: html,
     },
     {
-      name: "CSS 3",
+      name: "CSS",
       icon: css,
     },
     {
@@ -51,16 +28,16 @@ import {
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
+      name: "Python",
+      icon: python,
     },
     {
       name: "React JS",
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+      name: "Django",
+      icon: django,
     },
     {
       name: "Tailwind CSS",
@@ -75,6 +52,10 @@ import {
       icon: mongodb,
     },
     {
+      name: "Postgre",
+      icon: postgre,
+    },
+    {
       name: "Three JS",
       icon: threejs,
     },
@@ -83,14 +64,10 @@ import {
       icon: git,
     },
     {
-      name: "figma",
-      icon: figma,
-    },
-    {
       name: "docker",
       icon: docker,
     },
   ];
   
-  export { services, technologies };
+  export { technologies };
   

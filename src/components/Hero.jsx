@@ -1,19 +1,17 @@
 import { motion } from 'framer-motion';
-import { CrystalCanvas } from './canvas';
+import { CrystalCanvas, StarsCanvas } from './canvas';
 
 export default function Hero() {
 
   return (
+    <>
     <section className="relative w-full h-screen bg-[#11151c]">
-      <div className={`sm:px-16 px-6 absolute inset-0 top-[120px] left-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+      <StarsCanvas />
 
-        <p className={"sm:text-[18px] text-[14px] text-gray-400 uppercase tracking-widest mt-2 text-gray-400 pl-6"}>
+      <div className="relative headline-container">
+        <p className={"absolute top-16 mt-12 sm:text-[18px] text-[12px] uppercase tracking-widest text-white-100"}>
           Junior full-stack software engineer ⇀
         </p>
-
-      </div>
-
-      <div className="headline-container">
         <div id="text-behind">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-behind-blur">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-front">THEODORE<br /><span className="bottomText">CHOI</span></div>
@@ -40,5 +38,6 @@ export default function Hero() {
         </a>
       </div>
     </section>
+    </>
   )
 }

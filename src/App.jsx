@@ -1,35 +1,39 @@
+import { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Hero, Navbar, Tech, Projects, StarsCanvas } from './components';
+import { About, Contact, Hero, Navbar, Skills, Projects, Footer } from './components';
 import Lenis from '@studio-freight/lenis';
 
-export default function App() {
-  const lenis = new Lenis()
+export default function App() {  
 
-  lenis.on('scroll', (e) => {
-    console.log(e)
-  })
-
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
+  useEffect(() => {
+    const lenis = new Lenis();
+  
+    lenis.on('scroll', (e) => {
+      // console.log(e);
+    });
+  
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+  
+    requestAnimationFrame(raf);
+  
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-white-100">
-        <div>
-          <Navbar />
-          <Hero />
-        </div>
+        <Navbar />
+        <Hero />
         <Projects />
         <About />
-        <Tech />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Skills />
+        <Contact />
+        <Footer />
       </div>
     </BrowserRouter>
   )

@@ -10,7 +10,7 @@ Project.propTypes = {
     isModelFirst: PropTypes.bool
 };
 
-export default function Project({ projectNo, title, description, url, color, model, isModelFirst }) {
+export default function Project({ projectNo, title, tech, description, url, website, color, model, isModelFirst }) {
   const colorClasses = {
     blue: { bg: 'bg-blue-500', text: 'text-blue-500' },
     red: { bg: 'bg-red-500', text: 'text-red-500' },
@@ -25,40 +25,60 @@ export default function Project({ projectNo, title, description, url, color, mod
         {isModelFirst ? model : (
           <div className="mx-auto">
             <div className="flex items-center">
-              <div className={`w-16 h-0 border-2 border-black ml-2 mr-4`}></div>
+              <div className={`w-16 h-0 border-2 border-black ml-2 mr-4 rounded-xl`}></div>
               <p className={`${colorClasses[color].text} font-semibold`}>Project {projectNo}</p>
             </div>
-            <h1 className="text-4xl font-semibold text-black my-6">
+            <h1 className="text-4xl font-semibold text-black mt-6 mb-6">
               {title}
             </h1>
+            <p className={`text-xs text-white-100 ${colorClasses[color].bg} rounded-xl text-center w-fit px-4 py-1`}>
+              {tech}
+            </p>
             <p className="text-lg text-gray-500 my-8">
               {description}
             </p>
-            <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4`}>
-              <a href={url} target="_blank" rel="noreferrer">
-              View project ⇀
-              </a>
-            </button>
+            <div className="flex gap-4">
+              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl`}>
+                <a href={url} target="_blank" rel="noreferrer">
+                View project ⇀
+                </a>
+              </button>
+              <button className={`flex justify-center items-center bg-black px-4 pt-1 rounded-xl`}>
+                <a href={website} target="_blank" rel="noreferrer">
+                  <i className='bx bx-globe bx-sm' style={{color: '#ffffff'}}></i>
+                </a>
+              </button>
+            </div>
           </div>
         )}
 
         {isModelFirst ? (
           <div className="mx-auto">
             <div className="flex items-center">
-              <div className={`w-16 h-0 border-2 border-black ml-2 mr-4`}></div>
+              <div className={`w-16 h-0 border-2 border-black ml-2 mr-4 rounded-xl`}></div>
               <p className={`${colorClasses[color].text} font-semibold`}>Project {projectNo}</p>
             </div>
-            <h1 className="text-4xl font-semibold text-black my-6">
+            <h1 className="text-4xl font-semibold text-black mt-6 mb-6">
               {title}
             </h1>
+            <p className={`text-xs text-white-100 ${colorClasses[color].bg} rounded-xl text-center w-fit px-4 py-1`}>
+              {tech}
+            </p>
             <p className="text-lg text-gray-500 my-8">
               {description}
             </p>
-            <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4`}>
-              <a href={url} target="_blank" rel="noreferrer">
-              View project ⇀
-              </a>
-            </button>
+            <div className="flex gap-4">
+              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl`}>
+                <a href={url} target="_blank" rel="noreferrer">
+                View project ⇀
+                </a>
+              </button>
+              <button className={`flex justify-center items-center bg-black px-4 pt-1 rounded-xl`}>
+                <a href={website} target="_blank" rel="noreferrer">
+                  <i className='bx bx-globe bx-sm' style={{color: '#ffffff'}}></i>
+                </a>
+              </button>
+            </div>
           </div>
         ) : model }
         

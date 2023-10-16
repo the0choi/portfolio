@@ -7,13 +7,13 @@ export default function About() {
       <section className="relative w-full h-screen bg-[#11151c]">
         <div className={`sm:px-16 absolute inset-0 top-[120px] left-16 sm:left-[120px] max-w-7xl mx-auto flex md:flex-row flex-col items-start justify-start gap-5`}>
 
-          <div className="bg-white-100 w-4/5 md:w-1/2 p-6">
-            <h1 className="text-black-100 text-4xl font-semibold mb-8">Hi there.</h1>
-            <p className="text-black-100 z-10">
-              I’m Theodore, I am a junior full-stack software engineer based in Melbourne. I completed General Assembly's Software Engineering Immersive bootcamp program in September 2023. The software and tools I use for development can be found below. <br /><br />In my spare time I like to boulder, watch tennis and snowboard. Feel free to contact me via email or through LinkedIn!
+          <div className="bg-white-100 w-4/5 md:w-1/2 p-8 rounded-xl">
+            <h1 className="text-black-100 text-4xl font-semibold mb-8 z-30 relative">Hi there.</h1>
+            <p className="text-black-100 z-10 z-30 relative">
+              I’m Theodore, I am a junior full-stack software engineer based in Melbourne. I completed General Assembly's Software Engineering Immersive bootcamp program in September 2023. The software and tools I use for development can be found below. <br /><br />In my spare time I like to boulder, watch tennis and snowboard. Feel free to connect with me 🔗
             </p>
-            <button className="bg-red-500 py-2 px-4 mt-8">
-              <a href="" target="_blank" rel="noreferrer">
+            <button className="bg-[#049b9b] py-2 px-4 mt-8 rounded-xl">
+              <a href="https://drive.google.com/file/d/1XpKTT3y580CgI3dwwYRoEgaVnJbIsy0z/view?usp=drive_link" target="_blank" rel="noreferrer" className="z-30 relative">
               View resume ⇀
               </a>
               </button>
