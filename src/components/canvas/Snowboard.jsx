@@ -53,10 +53,11 @@ export default function SnowboardCanvas() {
       <Suspense fallback={<CanvasLoader />}>
           <OrbitControls 
           enableZoom={false}
-          enableRotate={false}
           enablePan={false} 
-          maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2}
+          minAzimuthAngle={-Math.PI / 50}
+          maxAzimuthAngle={Math.PI / 3}
           />
           <Snowboard isMobile={isMobile} />
       </Suspense>

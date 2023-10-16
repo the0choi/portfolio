@@ -31,7 +31,7 @@ export default function Navbar() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
-                    top: 6000,
+                    top: 8000,
                     behavior: "smooth"
                   });
                 }}
@@ -131,7 +131,7 @@ export default function Navbar() {
                   e.preventDefault();
                   setToggle(!toggle);
                   window.scrollTo({
-                    top: 6000,
+                    top: 8000,
                     behavior: "smooth"
                   });
                 }}

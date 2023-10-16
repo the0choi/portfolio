@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative w-full h-screen bg-[#11151c]">
       <StarsCanvas />
 
-      <div className="relative headline-container">
+      <div className="relative headline-container prevent-select">
         <p className={"absolute top-16 mt-12 sm:text-[18px] text-[12px] uppercase tracking-widest text-white-100"}>
           Junior full-stack software engineer ⇀
         </p>

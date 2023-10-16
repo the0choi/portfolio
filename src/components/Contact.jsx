@@ -2,7 +2,7 @@
 export default function Contact() {
   return (
     <>
-      <div className="h-80 w-full bg-gradient-to-b from-[#11151c] via-[#807e7e] to-transparent"></div>
+      {/* <div className="h-80 w-full bg-gradient-to-b from-[#11151c] via-[#807e7e] to-transparent"></div> */}
       <section className="relative w-full h-[600px] bg-transparent">
         <div className={`sm:px-16 absolute inset-0 top-[120px] left-16 sm:left-[120px] max-w-7xl mx-auto flex md:flex-row flex-col items-start justify-start gap-5`}>
 

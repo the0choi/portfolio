@@ -62,11 +62,10 @@ export default function CrystalCanvas() {
       >
       <Suspense fallback={<CanvasLoader />}>
           <OrbitControls 
-          enableZoom={false}
-          enableRotate={false}
-          enablePan={false} 
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
+            enableZoom={false}
+            enablePan={true} 
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
           />
           <Crystal isMobile={isMobile} />
       </Suspense>
