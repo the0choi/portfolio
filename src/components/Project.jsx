@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 Project.propTypes = {
     projectNo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    tech: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     model: PropTypes.object.isRequired,
     isModelFirst: PropTypes.bool
@@ -38,12 +40,12 @@ export default function Project({ projectNo, title, tech, description, url, webs
               {description}
             </p>
             <div className="flex gap-4">
-              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl`}>
+              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl hover:scale-105 duration-300`}>
                 <a href={url} target="_blank" rel="noreferrer">
                 View project ⇀
                 </a>
               </button>
-              <button className={`flex justify-center items-center bg-black px-4 pt-1 rounded-xl`}>
+              <button className={`flex justify-center items-center bg-black-100 px-4 pt-1 rounded-xl hover:scale-105 duration-300`}>
                 <a href={website} target="_blank" rel="noreferrer">
                   <i className='bx bx-globe bx-sm' style={{color: '#ffffff'}}></i>
                 </a>
@@ -68,12 +70,12 @@ export default function Project({ projectNo, title, tech, description, url, webs
               {description}
             </p>
             <div className="flex gap-4">
-              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl`}>
+              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl hover:scale-105 duration-300`}>
                 <a href={url} target="_blank" rel="noreferrer">
                 View project ⇀
                 </a>
               </button>
-              <button className={`flex justify-center items-center bg-black px-4 pt-1 rounded-xl`}>
+              <button className={`flex justify-center items-center bg-black px-4 pt-1 rounded-xl hover:scale-105 duration-300`}>
                 <a href={website} target="_blank" rel="noreferrer">
                   <i className='bx bx-globe bx-sm' style={{color: '#ffffff'}}></i>
                 </a>

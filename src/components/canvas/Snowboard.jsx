@@ -45,7 +45,7 @@ export default function SnowboardCanvas() {
   return (
     <>
       <Canvas
-      style={{ width: '70vw', height: '70vw', position: 'absolute', right: '-400px', top: '-300px', zIndex: '20'}}
+      style={{ width: '60vw', height: '70vw', position: 'absolute', right: '-500px', top: '-400px', zIndex: '20'}}
       frameloop="always"
       camera={{position: [5, 0, 10], fov: 10}}
       gl={{ preserveDrawingBuffer: true }}

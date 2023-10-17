@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { github, linkedin, menu, close } from '../assets';
 
@@ -21,13 +21,13 @@ export default function Navbar() {
               });
             }}
           >
-            <p className="text-white-100 text-[44px] font-bold cursor-pointer bg-[#049b9b] rounded-full px-4 pt-1 w-14 h-14 flex items-center justify-center">T</p>
+            <p className="text-white-100 text-[44px] font-bold cursor-pointer bg-gray-500 rounded-full px-4 pt-1 w-14 h-14 flex items-center justify-center hover:scale-110 hover:bg-[#049b9b] duration-300">T</p>
           </Link>
           
           <div className="gap-2 flex -rotate-90 my-48">
             <a 
                 href="/"
-                className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4"
+                className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4 hover:text-[#049b9b] hover:scale-105 duration-300"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
@@ -38,7 +38,7 @@ export default function Navbar() {
               >Contact</a>
             <a 
               href="/"
-              className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4"
+              className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4 hover:text-[#049b9b] hover:scale-105 duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({
@@ -49,7 +49,7 @@ export default function Navbar() {
             >About</a>
             <a 
               href="/"
-              className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4"
+              className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4 hover:text-[#049b9b] hover:scale-105 duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({
@@ -62,10 +62,10 @@ export default function Navbar() {
           
           <div className="gap-8 flex flex-col justify-end h-full">
             <a href='https://github.com/the0choi' target="_blank" rel="noreferrer">
-              <img src={github} alt='github' className='w-6 h-6 object-contain opacity-80 color-filter-1' />
+              <img src={github} alt='github' className='w-6 h-6 object-contain opacity-80 color-filter-1 hover:scale-125 duration-300' />
             </a>
             <a href='https://www.linkedin.com/in/theodore-choi-70ba61194/' target="_blank" rel="noreferrer">
-              <img src={linkedin} alt='linkedin' className='w-6 h-6 object-contain opacity-80 color-filter-2' />
+              <img src={linkedin} alt='linkedin' className='w-6 h-6 object-contain opacity-80 color-filter-2 hover:scale-125 duration-300' />
             </a>
           </div>
         </div>
