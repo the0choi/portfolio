@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { fadeIn } from "../utilities/motion";
 import PropTypes from 'prop-types';
 
 Project.propTypes = {
@@ -26,62 +28,122 @@ export default function Project({ projectNo, title, tech, description, url, webs
 
         {isModelFirst ? model : (
           <div className="mx-auto">
-            <div className="flex items-center">
+            <motion.div 
+              className="flex items-center"
+              variants={fadeIn("right", "easeOut", 1, 0.4)}
+              initial='hidden'
+              whileInView='show'
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={`w-16 h-0 border-2 border-black ml-2 mr-4 rounded-xl`}></div>
               <p className={`${colorClasses[color].text} font-semibold`}>Project {projectNo}</p>
-            </div>
-            <h1 className="text-4xl font-semibold text-black mt-6 mb-6">
+            </motion.div>
+            <motion.h1 
+              className="text-4xl font-semibold text-black mt-6 mb-6"
+              variants={fadeIn("up", "easeOut", 0.5, 0.4)}
+              initial='hidden'
+              whileInView='show'
+              viewport={{ once: true, amount: 0.3 }}
+            >
               {title}
-            </h1>
-            <p className={`text-xs text-white-100 ${colorClasses[color].bg} rounded-xl text-center w-fit px-4 py-1`}>
+            </motion.h1>
+            <motion.p 
+              className={`text-xs text-white-100 ${colorClasses[color].bg} rounded-xl text-center w-fit px-4 py-1`}
+              variants={fadeIn("up", "easeOut", 0.55, 0.4)}
+              initial='hidden'
+              whileInView='show'
+              viewport={{ once: true, amount: 0.3 }}
+            >
               {tech}
-            </p>
-            <p className="text-lg text-gray-500 my-8">
+            </motion.p>
+            <motion.p 
+              className="text-lg text-gray-500 my-8"
+              variants={fadeIn("up", "easeOut", 0.6, 0.4)}
+              initial='hidden'
+              whileInView='show'
+              viewport={{ once: true, amount: 0.3 }}
+            >
               {description}
-            </p>
-            <div className="flex gap-4">
+            </motion.p>
+            <motion.div 
+              className="flex gap-4"
+              variants={fadeIn("up", "easeOut", 0.6, 0.3)}
+              initial='hidden'
+              whileInView='show'
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl hover:scale-105 duration-300`}>
-                <a href={url} target="_blank" rel="noreferrer">
+                <a href={website} target="_blank" rel="noreferrer">
                 View project ⇀
                 </a>
               </button>
               <button className={`flex justify-center items-center bg-black-100 px-4 pt-1 rounded-xl hover:scale-105 duration-300`}>
-                <a href={website} target="_blank" rel="noreferrer">
-                  <i className='bx bx-globe bx-sm' style={{color: '#ffffff'}}></i>
+                <a href={url} target="_blank" rel="noreferrer">
+                  <i className='bx bx-code-alt bx-sm' style={{color: '#ffffff'}} />
                 </a>
               </button>
-            </div>
+            </motion.div>
           </div>
         )}
 
         {isModelFirst ? (
           <div className="mx-auto">
-            <div className="flex items-center">
-              <div className={`w-16 h-0 border-2 border-black ml-2 mr-4 rounded-xl`}></div>
-              <p className={`${colorClasses[color].text} font-semibold`}>Project {projectNo}</p>
-            </div>
-            <h1 className="text-4xl font-semibold text-black mt-6 mb-6">
-              {title}
-            </h1>
-            <p className={`text-xs text-white-100 ${colorClasses[color].bg} rounded-xl text-center w-fit px-4 py-1`}>
-              {tech}
-            </p>
-            <p className="text-lg text-gray-500 my-8">
-              {description}
-            </p>
-            <div className="flex gap-4">
-              <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl hover:scale-105 duration-300`}>
-                <a href={url} target="_blank" rel="noreferrer">
-                View project ⇀
-                </a>
-              </button>
-              <button className={`flex justify-center items-center bg-black px-4 pt-1 rounded-xl hover:scale-105 duration-300`}>
-                <a href={website} target="_blank" rel="noreferrer">
-                  <i className='bx bx-globe bx-sm' style={{color: '#ffffff'}}></i>
-                </a>
-              </button>
-            </div>
-          </div>
+          <motion.div 
+            className="flex items-center"
+            variants={fadeIn("right", "easeOut", 1, 0.4)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <div className={`w-16 h-0 border-2 border-black ml-2 mr-4 rounded-xl`}></div>
+            <p className={`${colorClasses[color].text} font-semibold`}>Project {projectNo}</p>
+          </motion.div>
+          <motion.h1 
+            className="text-4xl font-semibold text-black mt-6 mb-6"
+            variants={fadeIn("up", "easeOut", 0.5, 0.4)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {title}
+          </motion.h1>
+          <motion.p 
+            className={`text-xs text-white-100 ${colorClasses[color].bg} rounded-xl text-center w-fit px-4 py-1`}
+            variants={fadeIn("up", "easeOut", 0.55, 0.4)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {tech}
+          </motion.p>
+          <motion.p 
+            className="text-lg text-gray-500 my-8"
+            variants={fadeIn("up", "easeOut", 0.6, 0.4)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {description}
+          </motion.p>
+          <motion.div 
+            className="flex gap-4"
+            variants={fadeIn("up", "easeOut", 0.6, 0.3)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <button className={`text-xl text-white-100 ${colorClasses[color].bg} py-4 px-4 rounded-xl hover:scale-105 duration-300`}>
+              <a href={website} target="_blank" rel="noreferrer">
+              View project ⇀
+              </a>
+            </button>
+            <button className={`flex justify-center items-center bg-black-100 px-4 pt-1 rounded-xl hover:scale-105 duration-300`}>
+              <a href={url} target="_blank" rel="noreferrer">
+                <i className='bx bx-code-alt bx-sm' style={{color: '#ffffff'}} />
+              </a>
+            </button>
+          </motion.div>
+        </div>
         ) : model }
         
       </div>

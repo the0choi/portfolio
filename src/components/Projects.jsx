@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utilities/motion";
 import Project from './Project'; 
 import { LaptopCanvas } from './canvas'
 

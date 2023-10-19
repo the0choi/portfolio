@@ -1,6 +1,8 @@
 import { Suspense, useEffect, useState, useRef } from 'react';
-import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { motion } from 'framer-motion';
+import { reveal } from "../../utilities/motion";
 import CanvasLoader from '../Loader';
 import PropTypes from 'prop-types';
 
@@ -31,7 +33,7 @@ function Laptop({ isMobile, sceneModel, rotation }) {
 
   return (
     <mesh ref={meshRef}>
-      <hemisphereLight intensity={6} groundColor='black' />
+      <hemisphereLight intensity={4} groundColor='black' />
       <pointLight intensity={1} />
       <primitive
         object={laptop.scene}
@@ -82,10 +84,14 @@ export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation
       <Preload all />
       </Canvas>
 
-      { isModelFirst ? 
-          <h1 className="lg:flex hidden absolute -z-10 text-black text-[110px] font-semibold transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/4 text-clip text-center ml-2 ">{`"${title}"`}</h1>
-        :
-          <h1 className="lg:flex hidden absolute -z-10 text-black text-[110px] ml-48 font-semibold transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">{`"${title}"`}</h1>
+      { isModelFirst ?
+        <h1 
+          className="lg:flex hidden absolute -z-10 text-black text-[110px] font-semibold transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/4 text-clip text-center ml-2"
+        >{`"${title}"`}</h1>
+      :
+        <h1 
+          className="lg:flex hidden absolute -z-10 text-black text-[110px] ml-48 font-semibold transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center"
+        >{`"${title}"`}</h1>
     }
     </>
   )

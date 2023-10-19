@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { fadeIn } from "../utilities/motion";
 import { SnowboardCanvas } from './canvas';
 
 export default function About() {
@@ -7,7 +9,13 @@ export default function About() {
       <section className="relative w-full h-screen bg-[#11151c]">
         <div className={`sm:pl-16 pl-20 lg:pl-48 absolute inset-0 top-[120px] left-14 sm:left-[120px] flex md:flex-row flex-col items-start justify-start gap-5`}>
 
-          <div className="bg-white-100 w-4/5 md:w-1/2 p-8 rounded-xl">
+          <motion.div 
+            className="bg-white-100 w-4/5 md:w-1/2 p-8 rounded-xl"
+            variants={fadeIn("up", "easeOut", 0.5, 0.4)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <h1 className="text-black-100 text-4xl font-semibold mb-8 z-30 relative">Hi there.</h1>
             <p className="text-black-100 z-10 z-30 relative">
               I’m Theodore, a junior full-stack software engineer based in Melbourne. I completed General Assembly&apos;s Software Engineering Immersive bootcamp program in September 2023. The software and tools I use for development can be found below. <br /><br />In my spare time I like to boulder, watch tennis and snowboard. Feel free to connect with me 🔗.
@@ -17,7 +25,7 @@ export default function About() {
               View resume ⇀
               </a>
               </button>
-          </div>
+          </motion.div>
 
           <div className="relative mt-72 ml-8 md:flex hidden">
             <SnowboardCanvas />
