@@ -65,13 +65,13 @@ export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation
   return (
     <>
       <Canvas 
-      style={{ width: '50vw', height: '50vw' }}
-      frameloop="always"
-      shadows
-      camera={{position: [10, 0, 10], fov: 20}}
-      gl={{ preserveDrawingBuffer: true }}
+        style={{ width: '50vw', height: '50vw' }}
+        frameloop="always"
+        shadows
+        camera={{position: [10, 0, 10], fov: 20}}
+        gl={{ preserveDrawingBuffer: true }}
       >
-      <Suspense fallback={<CanvasLoader />}>
+        <Suspense fallback={<CanvasLoader />}>
           <OrbitControls 
           enableZoom={false}
           enablePan={false} 
@@ -79,9 +79,9 @@ export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation
           minPolarAngle={Math.PI / 2}
           />
           <Laptop isMobile={isMobile} sceneModel={sceneModel} rotation={rotation} />
-      </Suspense>
+        </Suspense>
 
-      <Preload all />
+        <Preload all />
       </Canvas>
 
       { isModelFirst ?

@@ -43,27 +43,25 @@ export default function SnowboardCanvas() {
   }, [])
 
   return (
-    <>
-      <Canvas
-      style={{ width: '60vw', height: '70vw', position: 'absolute', right: '-500px', top: '-400px', zIndex: '20'}}
-      frameloop="always"
-      camera={{position: [5, 0, 10], fov: 10}}
-      gl={{ preserveDrawingBuffer: true }}
-      >
+    <Canvas
+        style={{ width: '60vw', height: '70vw', position: 'absolute', right: '-500px', top: '-400px', zIndex: '20'}}
+        frameloop="always"
+        camera={{position: [5, 0, 10], fov: 10}}
+        gl={{ preserveDrawingBuffer: true }}
+    >
       <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls 
+        <OrbitControls 
           enableZoom={false}
           enablePan={false} 
           minPolarAngle={Math.PI / 2}
           maxPolarAngle={Math.PI / 2}
           minAzimuthAngle={-Math.PI / 50}
           maxAzimuthAngle={Math.PI / 3}
-          />
-          <Snowboard isMobile={isMobile} />
+        />
+        <Snowboard isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
-      </Canvas>
-    </>
+    </Canvas>
   )
 }

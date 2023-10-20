@@ -35,7 +35,7 @@ export default function Navbar() {
                     behavior: "smooth"
                   });
                 }}
-              >Contact</a>
+              >CONTACT</a>
             <a 
               href="/"
               className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4 hover:text-[#049b9b] hover:scale-105 duration-300"
@@ -46,7 +46,7 @@ export default function Navbar() {
                   behavior: "smooth"
                 });
               }}
-            >About</a>
+            >ABOUT</a>
             <a 
               href="/"
               className="hidden sm:flex text-[18px] tracking-wide font-medium cursor-pointer px-4 hover:text-[#049b9b] hover:scale-105 duration-300"
@@ -57,7 +57,7 @@ export default function Navbar() {
                   behavior: "smooth"
                 });
               }}
-            >Projects</a>
+            >PROJECTS</a>
           </div>
           
           <div className="gap-8 flex flex-col justify-end h-full">
@@ -111,7 +111,7 @@ export default function Navbar() {
                       behavior: "smooth"
                     });
                   }}
-                >Projects</a>
+                >PROJECTS</a>
               <a 
                 href="/"
                 className="text-[18px] font-medium cursor-pointer px-4"
@@ -123,7 +123,7 @@ export default function Navbar() {
                     behavior: "smooth"
                   });
                 }}
-              >About</a>
+              >ABOUT</a>
               <a 
                 href="/"
                 className="text-[18px] font-medium cursor-pointer px-4"
@@ -135,7 +135,7 @@ export default function Navbar() {
                     behavior: "smooth"
                   });
                 }}
-              >Contact</a>
+              >CONTACT</a>
             </div>
 
             <div className="gap-8 flex absolute bottom-20">

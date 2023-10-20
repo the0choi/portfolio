@@ -1,3 +1,4 @@
+import { DogCanvas } from './canvas';
 
 export default function Contact() {
   return (
@@ -14,6 +15,8 @@ export default function Contact() {
               theodore.choi07@gmail.com
             </div>
           </div>
+
+        <DogCanvas />
 
         </div>
 

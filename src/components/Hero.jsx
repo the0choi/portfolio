@@ -1,8 +1,30 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from "../utilities/motion";
-import { CrystalCanvas, StarsCanvas } from './canvas';
+import { useEffect } from 'react';
+import { CrystalCanvas, ArmCanvas, StarsCanvas } from './canvas';
 
 export default function Hero() {
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+  function scramble(el) {
+    let iterations = 0;
+    const interval = setInterval(() => {
+      el.innerText = el.innerText.split("").map( (letter, idx) => {
+        if (idx < iterations) return el.dataset.value[idx];
+        if (!/[a-zA-Z]/.test(letter)) return letter;
+        return letters[Math.floor(Math.random() * 26)];
+      }).join("")
+
+      if (iterations >= el.dataset.value.length) clearInterval(interval);
+      iterations += 1;
+      
+    }, 100)
+  }
+
+  useEffect(() => {
+    const subtitle = document.getElementById('subtitle');
+    scramble(subtitle);
+  }, [])
 
   return (
     <>
@@ -13,14 +35,18 @@ export default function Hero() {
         variants={fadeIn("", "", 0.1, 1)}
         className="relative headline-container prevent-select"
       >
-        <p className={"absolute top-16 mt-12 sm:text-[18px] text-[12px] uppercase tracking-widest text-white-100"}>
-          Jr. full-stack software engineer ⇀
+        <p 
+          className="absolute top-16 mt-12 sm:text-[18px] text-[12px] uppercase tracking-widest text-white-100"
+          id="subtitle"
+          data-value="Jr. full-stack software engineer"
+        >
+          Jr. full-stack software engineer
         </p>
         <div id="text-behind">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-behind-blur">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-front">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div className="canvas-container">
-            < CrystalCanvas />
+            {/* <CrystalCanvas /> */}
         </div>     
       </motion.div>
 
