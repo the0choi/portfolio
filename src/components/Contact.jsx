@@ -26,13 +26,14 @@ export default function Contact() {
 
   useEffect(() => {
     if (containerRef.current) {
-      containerRef.current.addEventListener('mousemove', handleMouseMove);
+      const ref = containerRef.current;
+      ref.addEventListener('mousemove', handleMouseMove);
 
       return () => {
-        containerRef.current.removeEventListener('mousemove', handleMouseMove);
+        ref.removeEventListener('mousemove', handleMouseMove);
       };
     }
-  }, [containerRef, handleMouseMove]);
+  }, [handleMouseMove]);
 
 
   return (
