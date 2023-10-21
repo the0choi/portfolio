@@ -86,30 +86,3 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
-
-export const reveal = (delay, duration) => {
-  return {
-    hidden: {
-      opacity: 0,
-      // left: "100%",
-    },
-    show: {
-      opacity: 1,
-      // left: 0,
-      transition: {
-        delay: delay,
-        duration: duration,
-        ease: "easeIn",
-      },
-      // style: {
-      //   position: "absolute",
-      //   top: 4,
-      //   bottom: 4,
-      //   left: 0,
-      //   right: 0,
-      //   backgroundColor: "red",
-      //   zIndex: 10,
-      // }
-    },
-  };
-};

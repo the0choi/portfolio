@@ -1,8 +1,6 @@
 import { Suspense, useEffect, useState, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import { motion } from 'framer-motion';
-import { reveal } from "../../utilities/motion";
 import CanvasLoader from '../Loader';
 import PropTypes from 'prop-types';
 
@@ -19,8 +17,7 @@ Laptop.propTypes = {
   rotation: PropTypes.array.isRequired,
 };
 
-
-function Laptop({ isMobile, sceneModel, rotation }) {
+function Laptop({ sceneModel, rotation }) {
 
   const laptop = useGLTF(sceneModel);
   const meshRef = useRef();
@@ -46,21 +43,6 @@ function Laptop({ isMobile, sceneModel, rotation }) {
 };
 
 export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation }) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
-    setIsMobile(mediaQuery.matches);
-    function handleMediaQueryChange(e) {
-      setIsMobile(e.matches);
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
 
   return (
     <>
@@ -78,7 +60,7 @@ export default function LaptopCanvas({ title, sceneModel, isModelFirst, rotation
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
           />
-          <Laptop isMobile={isMobile} sceneModel={sceneModel} rotation={rotation} />
+          <Laptop sceneModel={sceneModel} rotation={rotation} />
         </Suspense>
 
         <Preload all />

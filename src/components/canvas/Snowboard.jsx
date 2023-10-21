@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
-function Snowboard({ isMobile }) {
+function Snowboard() {
   const Snowboard = useGLTF('/snowboard/scene.gltf?url');
   const meshRef = useRef();
 
@@ -26,21 +26,6 @@ function Snowboard({ isMobile }) {
 };
 
 export default function SnowboardCanvas() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
-    setIsMobile(mediaQuery.matches);
-    function handleMediaQueryChange(e) {
-      setIsMobile(e.matches);
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
 
   return (
     <Canvas
@@ -58,7 +43,7 @@ export default function SnowboardCanvas() {
           minAzimuthAngle={-Math.PI / 50}
           maxAzimuthAngle={Math.PI / 3}
         />
-        <Snowboard isMobile={isMobile} />
+        <Snowboard />
       </Suspense>
 
       <Preload all />

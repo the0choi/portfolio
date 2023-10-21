@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from "../utilities/motion";
 import { useEffect } from 'react';
-import { CrystalCanvas, ArmCanvas, StarsCanvas } from './canvas';
+import { CrystalCanvas, StarsCanvas } from './canvas';
 
 export default function Hero() {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -46,7 +46,7 @@ export default function Hero() {
         <div id="text-behind-blur">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-front">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div className="canvas-container">
-            {/* <CrystalCanvas /> */}
+            <CrystalCanvas />
         </div>     
       </motion.div>
 
