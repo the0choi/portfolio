@@ -34,7 +34,7 @@ function HDRBackground({ children }) {
 }
 
 function Crystal() {  
-  const { scene } = useGLTF('/portfolio/crystal_rock/scene.gltf?url');
+  const { scene } = useGLTF('/portfolio/crystal_rock/scene.gltf');
   const mesh = useRef();
   const materialRef = useRef();
   const hdrTexture = useContext(HDRContext); 
@@ -45,14 +45,6 @@ function Crystal() {
       child.material.roughness = 0;
       child.material.metalness = 1;
       child.material.envMapIntensity = 10;
-      // child.material = new THREE.MeshStandardMaterial({
-      //   envMap: hdrTexture,
-      //   needsUpdate: true,
-      //   color: 0xffffff,
-      //   roughness: 0,
-      //   metalness: 1,
-      //   envMapIntensity: 1,
-      // });
     }
   });
 
