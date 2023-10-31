@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState, useRef } from 'react';
+import { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
@@ -12,7 +12,6 @@ LaptopCanvas.propTypes = {
 };
 
 Laptop.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
   sceneModel: PropTypes.string.isRequired,
   rotation: PropTypes.array.isRequired,
 };
