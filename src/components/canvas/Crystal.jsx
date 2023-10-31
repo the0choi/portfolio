@@ -18,8 +18,7 @@ function HDRBackground({ children }) {
 
   useEffect(() => {
     const loader = new RGBELoader();
-    loader.setPath('./public/crystal_rock/');
-    loader.load('gradient_2.hdr', (texture) => {
+    loader.load('/crystal_rock/gradient_2.hdr', (texture) => {
       const pmremGenerator = new THREE.PMREMGenerator(gl);
       const envMap = pmremGenerator.fromEquirectangular(texture).texture;
       setHdrTexture(envMap);

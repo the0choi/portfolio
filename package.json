@@ -3,9 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://the0choi.github.io/portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -17,6 +20,7 @@
     "@react-three/xr": "^5.7.1",
     "@studio-freight/lenis": "^1.0.27",
     "@types/three": "^0.157.2",
+    "black": "^0.3.0",
     "boxicons": "^2.1.4",
     "framer-motion": "^10.16.4",
     "maath": "^0.10.4",
@@ -38,8 +42,9 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
-    "vite": "^4.4.5"
+    "vite": "^4.5.0"
   }
 }
