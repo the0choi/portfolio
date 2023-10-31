@@ -16,7 +16,7 @@ export default function Projects() {
         model={
           <LaptopCanvas 
             title={"envision"} 
-            sceneModel={"/laptop_1/scene.gltf?url"} 
+            sceneModel={"/portfolio/laptop_1/scene.gltf?url"} 
             isModelFirst={false}
             rotation={[0.3, 0.3, -0.1]} 
           />
@@ -35,7 +35,7 @@ export default function Projects() {
         model={
           <LaptopCanvas 
             title={"dino park"} 
-            sceneModel={"/laptop_2/scene.gltf?url"} 
+            sceneModel={"/portfolio/laptop_2/scene.gltf?url"} 
             isModelFirst={true} 
             rotation={[0.3, 1, -0.2]} 
           />
@@ -54,7 +54,7 @@ export default function Projects() {
         model={
           <LaptopCanvas 
             title={"trackr"} 
-            sceneModel={"/laptop_3/scene.gltf?url"} 
+            sceneModel={"/portfolio/laptop_3/scene.gltf?url"} 
             isModelFirst={false} 
             rotation={[0.5, 0.5, -0.1]} 
           />
@@ -74,7 +74,7 @@ export default function Projects() {
         model={
           <LaptopCanvas 
             title={"sea sweep"} 
-            sceneModel={"/laptop_4/scene.gltf?url"} 
+            sceneModel={"/portfolio/laptop_4/scene.gltf?url"} 
             isModelFirst={true} 
             rotation={[0.8, 1, -0.7]} 
           />

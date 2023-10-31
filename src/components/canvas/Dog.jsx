@@ -5,7 +5,7 @@ import CanvasLoader from '../Loader';
 
 function Dog() {
   const mesh = useRef();
-  const { scene } = useGLTF('/shiba/scene.gltf?url');
+  const { scene } = useGLTF('/portfolio/shiba/scene.gltf?url');
 
   return (
     <mesh ref={mesh}>
