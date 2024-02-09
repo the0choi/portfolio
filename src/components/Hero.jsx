@@ -45,9 +45,9 @@ export default function Hero() {
         <div id="text-behind">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-behind-blur">THEODORE<br /><span className="bottomText">CHOI</span></div>
         <div id="text-front">THEODORE<br /><span className="bottomText">CHOI</span></div>
-        <div className="canvas-container">
+        {/* <div className="canvas-container">
             <CrystalCanvas />
-        </div>     
+        </div>      */}
       </motion.div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
