@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 function Snowboard() {
-  const Snowboard = useGLTF('/portfolio/snowboard/scene.gltf');
+  const Snowboard = useGLTF('/snowboard/scene.gltf');
   const meshRef = useRef();
 
   useFrame(({ clock }) => {

@@ -18,7 +18,7 @@ function HDRBackground({ children }) {
 
   useEffect(() => {
     const loader = new RGBELoader();
-    loader.load('/portfolio/crystal_rock/gradient_2.hdr', (texture) => {
+    loader.load('/crystal_rock/gradient_2.hdr', (texture) => {
       const pmremGenerator = new THREE.PMREMGenerator(gl);
       const envMap = pmremGenerator.fromEquirectangular(texture).texture;
       setHdrTexture(envMap);
@@ -34,7 +34,7 @@ function HDRBackground({ children }) {
 }
 
 function Crystal() {  
-  const { scene } = useGLTF('/portfolio/crystal_rock/scene.gltf');
+  const { scene } = useGLTF('/crystal_rock/scene.gltf');
   const mesh = useRef();
   const materialRef = useRef();
   const hdrTexture = useContext(HDRContext); 
